@@ -1,1 +1,1 @@
-Replace ONLY script.js and then press Ctrl+F5 on website.
+Upload/replace these files in GitHub for animated photo gallery.
