@@ -1,50 +1,37 @@
 
 <!DOCTYPE html>
-<html>
-<head>
+<html><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Happy Birthday Kashish</title>
+<title>All Photos Gallery</title>
 <style>
-body{margin:0;font-family:Arial;background:linear-gradient(135deg,#2b0035,#65004d);color:white;text-align:center}
-.page{min-height:100vh;padding:20px}
-.card{background:rgba(255,255,255,.08);padding:20px;border-radius:25px;max-width:850px;margin:25px auto;box-shadow:0 0 30px #ff4da6}
+body{margin:0;background:linear-gradient(135deg,#2b0035,#65004d);font-family:Arial;color:white;text-align:center}
+#page2{display:none}
+.card{background:rgba(255,255,255,.08);padding:20px;border-radius:25px;max-width:1000px;margin:25px auto;box-shadow:0 0 30px #ff4da6}
 input,textarea{width:90%;padding:15px;border:none;border-radius:15px;margin:10px}
 button{padding:15px 35px;border:none;border-radius:30px;background:#ff4da6;color:#fff;font-size:18px}
-.gallery{display:flex;flex-wrap:wrap;gap:20px;justify-content:center}
-.pic{width:240px;height:320px;object-fit:cover;border-radius:25px;box-shadow:0 0 25px #ff4da6;animation:f 2s infinite alternate}
+.gallery{display:flex;flex-wrap:wrap;gap:18px;justify-content:center}
+.pic{width:230px;height:320px;object-fit:cover;border-radius:25px;box-shadow:0 0 25px #ff4da6;animation:f 2s infinite alternate}
 @keyframes f{from{transform:translateY(0)}to{transform:translateY(-10px)}}
-#page2{display:none}
-</style>
-</head>
+</style></head>
 <body>
 
-<div id="page1" class="page">
-<div class="card">
+<div id="page1" class="card">
 <h1>🎂 Happy Birthday Kashish 💖</h1>
-<p>💌 Pehle apna naam aur wish likho</p>
+<p>💌 Naam aur wish likho</p>
 <input id="name" placeholder="Apna naam">
-<textarea id="wish" placeholder="Wish / Shayari likho"></textarea>
+<textarea id="wish" placeholder="Wish likho"></textarea>
 <button onclick="go()">Send Wish 💝</button>
 </div>
-</div>
 
-<div id="page2" class="page">
-<h1>✨ Welcome Kashish ✨</h1>
-
+<div id="page2">
 <div class="card">
-<h2>🎵 Birthday Music</h2>
-<audio controls autoplay loop>
-<source src="song.mp3" type="audio/mpeg">
-</audio>
-</div>
-
-<div class="card">
-<h2>🌹 Shayari Corner 🌹</h2>
+<h1>✨ Welcome ✨</h1>
+<audio controls autoplay loop><source src="song.mp3" type="audio/mpeg"></audio>
+<h2>🌹 Shayari</h2>
 <p>Khushiyon se bhara ho har pal tumhara 💖</p>
 <p>Muskaan se roshan rahe chehra tumhara ❤️</p>
-<p>Janamdin mubarak ho 🎂</p>
-<p>Har dua qubool ho 💝</p>
+<p>Happy Birthday Kashish 🎂</p>
 </div>
 
 <div class="card">
@@ -53,25 +40,20 @@ button{padding:15px 35px;border:none;border-radius:30px;background:#ff4da6;color
 </div>
 
 <div class="card">
-<h2>📸 Memories</h2>
-<div class="gallery">
-<img src="newphoto1.jpeg" class="pic">
-<img src="newphoto2.jpeg" class="pic">
-<img src="party1.jpeg" class="pic">
-<img src="party2.jpeg" class="pic">
-<img src="party3.jpeg" class="pic">
-</div>
+<h2>📸 All Memories (16 photos)</h2>
+<div class="gallery"><img src="WhatsApp_Image_2026-05-19_at_8.31.26_AM.jpeg" class="pic"><img src="WhatsApp_Image_2026-05-19_at_8.29.51_AM.jpeg" class="pic"><img src="WhatsApp_Image_2026-05-19_at_8.31.27_AM_(1).jpeg" class="pic"><img src="WhatsApp_Image_2026-05-19_at_8.31.28_AM.jpeg" class="pic"><img src="WhatsApp_Image_2026-05-19_at_8.31.27_AM.jpeg" class="pic"><img src="WhatsApp_Image_2026-05-19_at_8.50.11_AM.jpeg" class="pic"><img src="WhatsApp_Image_2026-05-19_at_8.50.11_AM_(1).jpeg" class="pic"><img src="WhatsApp_Image_2026-05-19_at_8.50.06_AM_(1).jpeg" class="pic"><img src="WhatsApp_Image_2026-05-19_at_8.50.06_AM.jpeg" class="pic"><img src="WhatsApp_Image_2026-05-19_at_8.50.10_AM.jpeg" class="pic"><img src="WhatsApp_Image_2026-05-19_at_8.50.07_AM_(1).jpeg" class="pic"><img src="WhatsApp_Image_2026-05-19_at_8.50.07_AM.jpeg" class="pic"><img src="WhatsApp_Image_2026-05-19_at_8.50.08_AM.jpeg" class="pic"><img src="WhatsApp_Image_2026-05-19_at_8.57.08_AM_(1).jpeg" class="pic"><img src="WhatsApp_Image_2026-05-19_at_8.57.07_AM_(1).jpeg" class="pic"><img src="WhatsApp_Image_2026-05-19_at_8.57.07_AM.jpeg" class="pic"></div>
 </div>
 </div>
 
 <script>
 function go(){
- let n=document.getElementById('name').value;
- let w=document.getElementById('wish').value;
- if(n==''||w==''){alert('Naam aur wish likho');return;}
- document.getElementById('page1').style.display='none';
- document.getElementById('page2').style.display='block';
- document.getElementById('wall').innerHTML='<div style="background:#fff1;padding:15px;border-radius:20px">'+n+' : '+w+'</div>';
+let n=document.getElementById('name').value;
+let w=document.getElementById('wish').value;
+if(n==''||w==''){alert('Naam aur wish likho');return;}
+document.getElementById('page1').style.display='none';
+document.getElementById('page2').style.display='block';
+document.getElementById('wall').innerHTML='<div style="background:#fff1;padding:15px;border-radius:20px">'+n+' : '+w+'</div>';
 }
 </script>
+
 </body></html>
