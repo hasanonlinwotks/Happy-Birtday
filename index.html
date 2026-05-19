@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Kashish ❤️</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="particles"></div>
+
+<header class="hero">
+  <h1>🎂 Happy Birthday <span>Kashish ❤️</span></h1>
+  <p>You are Special ✨</p>
+  <button onclick="document.getElementById('wish').scrollIntoView({behavior:'smooth'})">Send Wish 💖</button>
+</header>
+
+<section class="music">
+<audio controls>
+<source src="" type="audio/mpeg">
+</audio>
+<p>Add your birthday song later 🎵</p>
+</section>
+
+<section id="wish" class="wish-box glass">
+<h2>💌 Send Your Wish</h2>
+<input id="name" placeholder="Your Name">
+<textarea id="msg" placeholder="Write your shayari / wish..."></textarea>
+<input type="file" id="media" accept="image/*,video/*">
+<button onclick="addWish()">Post Wish 🚀</button>
+</section>
+
+<section class="wall">
+<h2>❤️ Public Wish Wall</h2>
+<div id="wall"></div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
