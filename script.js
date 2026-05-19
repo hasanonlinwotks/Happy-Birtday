@@ -1,37 +1,21 @@
-
+document.getElementById('mainPage').style.display='none';
 function enterSite(){
-const name=document.getElementById('nameInput').value.trim();
-const wish=document.getElementById('wishInput').value.trim();
-
-if(name==='' || wish===''){
-alert('Naam aur wish likho ❤️');
-return;
-}
-
-let wishes=JSON.parse(localStorage.getItem('entryWishes')||'[]');
-wishes.push({name,wish});
-localStorage.setItem('entryWishes',JSON.stringify(wishes));
-
-document.getElementById('entryPage').style.display='none';
-document.getElementById('mainPage').style.display='block';
-
+let n=nameInput.value.trim(),w=wishInput.value.trim();
+if(!n||!w){alert('Naam aur wish likho ❤️');return;}
+let a=JSON.parse(localStorage.getItem('wallV6')||'[]');
+a.push({n,w});
+localStorage.setItem('wallV6',JSON.stringify(a));
+entryPage.style.display='none';
+mainPage.style.display='block';
 loadWall();
 }
-
 function loadWall(){
-let wishes=JSON.parse(localStorage.getItem('entryWishes')||'[]');
-const wall=document.getElementById('wall');
+let a=JSON.parse(localStorage.getItem('wallV6')||'[]');
 wall.innerHTML='';
-
-wishes.reverse().forEach(w=>{
+a.reverse().forEach(x=>{
 let c=document.createElement('div');
 c.className='card';
-c.innerHTML='<h3>'+w.name+'</h3><p>'+w.wish+'</p>';
+c.innerHTML='<h3>'+x.n+'</h3><p>'+x.w+'</p>';
 wall.appendChild(c);
 });
-}
-
-window.onload=function(){
-document.getElementById('mainPage').style.display='none';
-loadWall();
 }
