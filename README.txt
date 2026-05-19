@@ -1,1 +1,1 @@
-Replace old files with these V2 files in GitHub.
+Replace ONLY script.js and then press Ctrl+F5 on website.
