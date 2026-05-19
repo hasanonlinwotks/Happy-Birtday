@@ -1,36 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Kashish ❤️</title>
+<title>Happy Birthday Kashish ❤️ V2</title>
 <link rel="stylesheet" href="style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div id="particles"></div>
+<div class="bg"></div>
+<div class="confetti"></div>
 
-<header class="hero">
-  <h1>🎂 Happy Birthday <span>Kashish ❤️</span></h1>
-  <p>You are Special ✨</p>
-  <button onclick="document.getElementById('wish').scrollIntoView({behavior:'smooth'})">Send Wish 💖</button>
-</header>
+<section class="hero">
+<h1>🎂 Happy Birthday <span>Kashish ❤️</span></h1>
+<p>✨ A magical birthday celebration ✨</p>
+<button onclick="scrollToWish()">💌 Send Your Wish</button>
+</section>
 
-<section class="music">
+<section class="music glass">
+<h2>🎵 Birthday Music</h2>
 <audio controls>
 <source src="" type="audio/mpeg">
 </audio>
-<p>Add your birthday song later 🎵</p>
+<p>Add your MP3 later</p>
 </section>
 
-<section id="wish" class="wish-box glass">
-<h2>💌 Send Your Wish</h2>
-<input id="name" placeholder="Your Name">
-<textarea id="msg" placeholder="Write your shayari / wish..."></textarea>
-<input type="file" id="media" accept="image/*,video/*">
-<button onclick="addWish()">Post Wish 🚀</button>
+<section class="wish glass" id="wish">
+<h2>💖 Send Your Wish</h2>
+<input type="text" id="nameInput" placeholder="Your Name">
+<textarea id="msgInput" placeholder="Write your wish / shayari"></textarea>
+<input type="file" id="fileInput" accept="image/*,video/*">
+<div id="preview"></div>
+<button onclick="addWish()">🚀 Post Wish</button>
 </section>
 
 <section class="wall">

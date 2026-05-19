@@ -1,1 +1,1 @@
-Upload to GitHub Pages. Add your own MP3 later in index.html audio source.
+Replace old files with these V2 files in GitHub.
